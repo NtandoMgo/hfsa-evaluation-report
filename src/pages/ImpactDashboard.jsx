@@ -2,13 +2,26 @@ import React from 'react';
 import { Bar, Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-// Sample data for up to 32 learners
+// Sample data for up to 30 learners
 const learners = [
   { id: 2, maths: 'Improved', physics: 'Tricky but improving', futureStudies: 'Yes', universities: ['WITS', 'UCT', 'NWU'], status: 'Provisionally accepted', funding: 'NSFAS' },
   { id: 3, maths: 'Results improved', physics: 'Results improved', futureStudies: 'Yes', universities: ['CPUT'], status: 'Accepted', funding: 'NSFAS' },
   { id: 4, maths: 'Consistent marks', physics: 'Increased marks', futureStudies: 'Yes', universities: ['Stellenbosch', 'UWC'], status: 'Waiting list', funding: 'NSFAS' },
   { id: 5, maths: 'Understood better', physics: 'Improved by practice', futureStudies: 'Yes', universities: [], status: 'Pending', funding: 'HCI Foundation, NSFAS' },
-  // Extend dataset to include up to 32 learners
+  { id: 6, maths: 'Survived', physics: 'Consistent per term', futureStudies: 'No', universities: ['UCT', 'SU'], status: 'Provisionally accepted', funding: 'NSFAS, ISFAP' },
+  { id: 7, maths: 'New respect for maths', physics: 'More comprehensive', futureStudies: 'Yes', universities: ['UWC', 'WITS'], status: 'Provisionally selected', funding: 'NSFAS' },
+  { id: 8, maths: 'Progress with content', physics: 'Learned a lot more', futureStudies: 'Yes', universities: ['UJ', 'UWC'], status: 'Provisionally selected', funding: 'NSFAS' },
+  { id: 9, maths: 'Improved problem solving', physics: 'Better understanding', futureStudies: 'Yes', universities: ['UCT', 'UP'], status: 'Accepted', funding: 'NSFAS' },
+  { id: 10, maths: 'Steady progress', physics: 'Some difficulties', futureStudies: 'Yes', universities: ['SU', 'UKZN'], status: 'Waiting list', funding: 'NSFAS' },
+  ...Array.from({ length: 20 }, (_, i) => ({
+    id: i + 11,
+    maths: ['Improved', 'Consistent marks', 'Results improved', 'Better understanding'][Math.floor(Math.random() * 4)],
+    physics: ['Tricky but improving', 'Learned a lot more', 'More comprehensive', 'Some difficulties'][Math.floor(Math.random() * 4)],
+    futureStudies: ['Yes', 'No'][Math.floor(Math.random() * 2)],
+    universities: ['UCT', 'WITS', 'SU', 'UWC', 'CPUT', 'UP', 'UKZN'].filter(() => Math.random() > 0.5),
+    status: ['Accepted', 'Provisionally accepted', 'Waiting list', 'Pending'][Math.floor(Math.random() * 4)],
+    funding: ['NSFAS', 'HCI Foundation', 'ISFAP', 'Other'][Math.floor(Math.random() * 4)]
+  }))
 ];
 
 // Aggregate statistics
@@ -33,11 +46,16 @@ const data = {
 };
 
 const fundingData = {
-  labels: ['NSFAS', 'HCI Foundation', 'Other'],
+  labels: ['NSFAS', 'HCI Foundation', 'ISFAP', 'Other'],
   datasets: [
     {
-      data: [learners.filter(l => l.funding.includes('NSFAS')).length, learners.filter(l => l.funding.includes('HCI Foundation')).length, totalLearners - (learners.filter(l => l.funding.includes('NSFAS')).length + learners.filter(l => l.funding.includes('HCI Foundation')).length)],
-      backgroundColor: ['#FFEB3B', '#00BCD4', '#9E9E9E'],
+      data: [
+        learners.filter(l => l.funding.includes('NSFAS')).length,
+        learners.filter(l => l.funding.includes('HCI Foundation')).length,
+        learners.filter(l => l.funding.includes('ISFAP')).length,
+        totalLearners - (learners.filter(l => ['NSFAS', 'HCI Foundation', 'ISFAP'].some(f => l.funding.includes(f))).length)
+      ],
+      backgroundColor: ['#FFEB3B', '#00BCD4', '#9E9E9E', '#FF5722'],
     },
   ],
 };
