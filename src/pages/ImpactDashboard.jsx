@@ -36,6 +36,27 @@ const categories = {
   }
 };
 
+const data = {
+  labels: ['Maths Improved', 'Physics Improved', 'Future Studies Considered', 'Accepted', 'Provisionally Accepted', 'Pending', 'Waiting List'],
+  datasets: [
+    {
+      label: 'Number of Learners',
+      data: [15, 12, 20, 10, 8, 5, 7],
+      backgroundColor: ['#4CAF50', '#2196F3', '#FF9800', '#673AB7', '#E91E63', '#9C27B0', '#FFC107'],
+    },
+  ],
+};
+
+const fundingData = {
+  labels: ['NSFAS', 'HCI Foundation', 'ISFAP', 'Other'],
+  datasets: [
+    {
+      data: [25, 10, 8, 7],
+      backgroundColor: ['#FFEB3B', '#00BCD4', '#9E9E9E', '#FF5722'],
+    },
+  ],
+};
+
 const ImpactDashboard = () => {
   const [selectedCategory, setSelectedCategory] = useState('Confidence Building');
 
@@ -44,6 +65,17 @@ const ImpactDashboard = () => {
       <h1 className="text-5xl font-extrabold mb-8 text-center text-gray-800 tracking-wide">
         🚀 HFSA Impact Dashboard 🚀
       </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-white p-8 shadow-xl rounded-xl transform hover:scale-105 transition-all duration-300">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">📊 Academic Improvement</h2>
+          <Bar data={data} />
+        </div>
+        <div className="bg-white p-8 shadow-xl rounded-xl transform hover:scale-105 transition-all duration-300">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">💰 Funding Sources</h2>
+          <Pie data={fundingData} />
+        </div>
+      </div>
 
       <div className="mt-16 bg-white p-10 shadow-2xl rounded-3xl text-center">
         <h2 className="text-4xl font-extrabold mb-10 text-gray-800 tracking-wide">
