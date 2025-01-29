@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import html2canvas from 'html2canvas'; // Import html2canvas
 
 const Grade11Dashboard = () => {
   const [activeTestimonialCategory, setActiveTestimonialCategory] = useState('academic');
@@ -8,10 +9,7 @@ const Grade11Dashboard = () => {
   const subjectImprovementData = [
     { subject: 'Maths', improved: 45, notImproved: 12 },
     { subject: 'Physics', improved: 38, notImproved: 19 },
-    { subject: 'Chemistry', improved: 42, notImproved: 15 },
-    // { subject: 'Biology', improved: 27, notImproved: 13 },
-    // { subject: 'English', improved: 40, notImproved: 10 },
-    // { subject: 'History', improved: 34, notImproved: 16 }
+    { subject: 'Chemistry', improved: 42, notImproved: 15 }
   ];
 
   const programBenefitsData = [
@@ -59,12 +57,25 @@ const Grade11Dashboard = () => {
     'Include workshops focused on developing soft skills like leadership and teamwork'
   ];
 
+  // Function to export the entire page as an image
+  const handleExport = () => {
+    const exportElement = document.getElementById('dashboard-content');
+    
+    html2canvas(exportElement).then((canvas) => {
+      const image = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = image;
+      link.download = 'grade11-dashboard.png';
+      link.click();
+    });
+  };
+
   return (
     <div className="p-6 w-full max-w-4xl">
       <h1 className="text-3xl font-bold mb-6">Grade 11 Program Impact Dashboard</h1>
       
-      <div className="grid grid-cols-2 gap-6">
-        {/* Charts remain the same as previous version */}
+      <div className="grid grid-cols-2 gap-6" id="dashboard-content">
+        {/* Subject Improvement Chart */}
         <div className="bg-white p-4 rounded shadow">
           <h2 className="text-xl font-semibold mb-4">Subject Improvement</h2>
           <BarChart width={400} height={250} data={subjectImprovementData}>
@@ -107,6 +118,16 @@ const Grade11Dashboard = () => {
             <li key={index}>{suggestion}</li>
           ))}
         </ul>
+      </div>
+
+      {/* Export Button */}
+      <div className="text-center mt-8">
+        <button
+          onClick={handleExport}
+          className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition-all"
+        >
+          📥 Export as Image
+        </button>
       </div>
     </div>
   );
