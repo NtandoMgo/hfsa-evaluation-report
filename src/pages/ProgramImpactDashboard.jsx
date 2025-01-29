@@ -27,9 +27,9 @@ const Grade11Dashboard = () => {
     academic: [
       '"The program helped me improve my problem-solving skills, and I scored better in exams." - Learner 34',
       '"My marks improved dramatically after attending the program, and I feel much more confident." - Learner 56',
-      '"I learned how to study more effectively, and my grades in all subjects went up." - Learner 73',
+      '"I learned how to study more effectively, and my grades in all subjects went up." - Learner 33',
       '"This program has taught me valuable time management skills that I now use in all my studies." - Learner 21',
-      '"I never thought I could improve in math, but this program showed me that I can." - Learner 89',
+      '"I never thought I could improve in math, but this program showed me that I can." - Learner 69',
       '"I gained a lot of confidence in my abilities, and I see the results in my grades." - Learner 13'
     ],
     personal: [
@@ -38,7 +38,7 @@ const Grade11Dashboard = () => {
       '"The activities and group discussions made me feel more connected to my classmates and the content." - Learner 45',
       '"Thanks to the program, I now approach my studies with a positive mindset and enthusiasm." - Learner 30',
       '"It helped me believe in myself and my ability to succeed academically and personally." - Learner 22',
-      '"The encouragement I received during the program helped me push through tough times." - Learner 88'
+      '"The encouragement I received during the program helped me push through tough times." - Learner 48'
     ],
     career: [
       '"I feel so much more ambitious about my future now. I know I have so many career options ahead." - Learner 1',
