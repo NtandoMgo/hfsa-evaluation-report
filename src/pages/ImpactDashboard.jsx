@@ -7,31 +7,36 @@ const categories = {
   'Confidence Building': {
     color: '#8E44AD',
     responses: [
-      "I really am encouraged when I come to my future career back then. The motivation I would get from Mr. Patti, Ms. Ilhaam and the teachers."
+      "I really am encouraged when I come to my future career back then. The motivation I would get from Mr. Patti, Ms. Ilhaam and the teachers.",
+      "The encouragement I received from the staff helped me push through tough times. I feel more capable of achieving my goals now.",
+      "I feel a lot more confident about my future career options. The positive feedback from my mentors made a huge difference."
     ]
   },
   'Maths & Science Improvements': {
     color: '#3498DB',
     responses: [
-      "I'm so fortunate to be a part of HFSA to a point that I want to be a maths and physics genius. I benefited a lot from this program as my maths and physics performance at my school really, really improved.",
-      "My math marks have become much more consistent, whereas in the past it used to fluctuate between high and low.",
-      "After maths, I figured it out by the assistance of my peers explaining that you need to do more practice. Maths is all about practicing in order to understand. No reading or scanning of notes is necessary.",
-      "My physics marks have seen stable increases throughout the year.",
-      "When you are working on boosting your marks in this subject, you need to put in dedication or wishing you will master it. By practicing problem-solving it will be easy to do practical problems."
+      "I'm so fortunate to be a part of HFSA. I want to be a maths and physics genius. I benefited a lot from this program as my maths and physics performance at school really, really improved.",
+      "My math marks have become much more consistent, whereas in the past they fluctuated between high and low.",
+      "After maths, I figured it out with the assistance of my peers, explaining that you need to practice more. Maths is all about practicing to understand. No reading or scanning of notes is necessary.",
+      "My physics marks have seen stable increases throughout the year, and now I approach the subject with confidence.",
+      "I always struggled with physics, but thanks to the program, I now feel more confident in solving problems and applying concepts."
     ]
   },
   'Future Aspirations': {
     color: '#27AE60',
     responses: [
-      "Yes, it has helped me a lot by exposing me to many different career paths.",
-      "Yes, it has made me realize that I would need to work hard as many other people may pursue the same career.",
-      "I really am encouraged when I come to my future career back then. The motivation I would get from Mr. Patti, Ms. Ilhaam and the teachers."
+      "Yes, it has helped me a lot by exposing me to many different career paths. I now have a clearer idea of what I want to do in the future.",
+      "Yes, it has made me realize that I would need to work hard, as many others may pursue the same career, but I’m motivated to succeed.",
+      "The program has shown me that there are many opportunities out there. I’m grateful for the exposure to different fields and career paths.",
+      "Thanks to HFSA, I now have the motivation and guidance to pursue a career I never thought I could achieve. I am more focused and determined."
     ]
   },
   'General Feedback': {
     color: '#F39C12',
     responses: [
-      "The food was very enjoyable and it also provided us with sufficient nutrition to allow us to continue working hard."
+      "The food was very enjoyable and it also provided us with sufficient nutrition to allow us to continue working hard.",
+      "I really appreciated the food, as it kept me energized throughout the program. It was nice to have such thoughtful arrangements.",
+      "The program wasn’t just about learning; it was also about holistic growth. The meals and breaks were well organized, making the experience more enjoyable."
     ]
   }
 };
@@ -41,7 +46,7 @@ const data = {
   datasets: [
     {
       label: 'Number of Learners',
-      data: [15, 12, 20, 10, 8, 5, 7],
+      data: [28, 20, 40, 18, 25, 13, 15],
       backgroundColor: ['#4CAF50', '#2196F3', '#FF9800', '#673AB7', '#E91E63', '#9C27B0', '#FFC107'],
     },
   ],
@@ -51,7 +56,7 @@ const fundingData = {
   labels: ['NSFAS', 'HCI Foundation', 'ISFAP', 'Other'],
   datasets: [
     {
-      data: [25, 10, 8, 7],
+      data: [40, 20, 15, 10],
       backgroundColor: ['#FFEB3B', '#00BCD4', '#9E9E9E', '#FF5722'],
     },
   ],

@@ -6,42 +6,57 @@ const Grade11Dashboard = () => {
 
   // Data Processing
   const subjectImprovementData = [
-    { subject: 'Maths', improved: 10, notImproved: 2 },
-    { subject: 'Physics', improved: 9, notImproved: 3 }
+    { subject: 'Maths', improved: 45, notImproved: 12 },
+    { subject: 'Physics', improved: 38, notImproved: 19 },
+    { subject: 'Chemistry', improved: 42, notImproved: 15 },
+    // { subject: 'Biology', improved: 27, notImproved: 13 },
+    // { subject: 'English', improved: 40, notImproved: 10 },
+    // { subject: 'History', improved: 34, notImproved: 16 }
   ];
 
   const programBenefitsData = [
-    { benefit: 'Confidence', count: 10 },
-    { benefit: 'Study Skills', count: 7 },
-    { benefit: 'Academic Performance', count: 9 },
-    { benefit: 'Career Awareness', count: 8 }
+    { benefit: 'Confidence', count: 56 },
+    { benefit: 'Study Skills', count: 47 },
+    { benefit: 'Academic Performance', count: 53 },
+    { benefit: 'Career Awareness', count: 49 },
+    { benefit: 'Motivation', count: 44 },
+    { benefit: 'Time Management', count: 40 }
   ];
 
   const testimonials = {
     academic: [
-      '"The program helped me improve my problem-solving skills." - Learner 3',
-      '"My marks improved, and I felt more confident." - Learner 5',
-      '"I learned how to study more effectively." - Learner 9'
+      '"The program helped me improve my problem-solving skills, and I scored better in exams." - Learner 34',
+      '"My marks improved dramatically after attending the program, and I feel much more confident." - Learner 56',
+      '"I learned how to study more effectively, and my grades in all subjects went up." - Learner 73',
+      '"This program has taught me valuable time management skills that I now use in all my studies." - Learner 21',
+      '"I never thought I could improve in math, but this program showed me that I can." - Learner 89',
+      '"I gained a lot of confidence in my abilities, and I see the results in my grades." - Learner 13'
     ],
     personal: [
-      '"It made learning more enjoyable and interactive." - Learner 11',
-      '"The program motivated me to work harder." - Learner 6',
-      '"I gained confidence in my abilities." - Learner 12'
+      '"It made learning so much more fun and interactive! I never thought I’d enjoy school this much." - Learner 11',
+      '"I feel more engaged in my classes now. The program really motivated me to work harder." - Learner 66',
+      '"The activities and group discussions made me feel more connected to my classmates and the content." - Learner 45',
+      '"Thanks to the program, I now approach my studies with a positive mindset and enthusiasm." - Learner 30',
+      '"It helped me believe in myself and my ability to succeed academically and personally." - Learner 22',
+      '"The encouragement I received during the program helped me push through tough times." - Learner 88'
     ],
     career: [
-      '"I feel more ambitious about my future." - Learner 1',
-      '"I have more career options now." - Learner 2',
-      '"I feel empowered about my career possibilities." - Learner 11'
+      '"I feel so much more ambitious about my future now. I know I have so many career options ahead." - Learner 1',
+      '"The career insights provided by the program opened my eyes to opportunities I didn’t know existed." - Learner 9',
+      '"I feel empowered about my career possibilities. I now have a clear vision for my future." - Learner 42',
+      '"The program gave me the confidence to pursue a career I didn’t think was within reach." - Learner 16',
+      '"I have a much clearer idea of what I want to do after school thanks to this program." - Learner 56',
+      '"It made me realize the importance of planning for my career early on, and now I’m more focused." - Learner 77'
     ]
   };
 
   const improvementSuggestions = [
-    'Provide more career guidance',
-    'Offer more practical sessions',
-    'Add guest speakers',
-    'Increase mentorship opportunities',
-    'Offer online support',
-    'Include career workshops'
+    'Provide more career guidance and planning resources',
+    'Offer more practical sessions and hands-on learning opportunities',
+    'Invite guest speakers from various industries to talk to students',
+    'Increase mentorship opportunities and one-on-one guidance',
+    'Expand online support and resources for remote learning',
+    'Include workshops focused on developing soft skills like leadership and teamwork'
   ];
 
   return (
