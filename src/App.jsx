@@ -35,7 +35,7 @@ import FeedbackAnalysis from './pages/FeedbackAnalysis'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+      {/* <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
         <a
           href="https://forms.gle/Gi1gUrA4bNxSxTDo6"
           target="_blank"
@@ -44,17 +44,16 @@ function App() {
         >
           Fill out the Grade 11 Feedback Form
         </a>
-      </div>
+      </div> */}
 
-      {/* If you want to enable routes later, just uncomment this block */}
-      {/* <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50">
         <Navigation />
         <Routes>
           <Route path="/" element={<ImpactDashboard />} />
           <Route path="/grade12-2025-feedback" element={<Grade12Feedback2025 />} />
           <Route path="/feedback-analysis" element={<FeedbackAnalysis />} />
         </Routes>
-      </div> */}
+      </div>
     </Router>
   )
 }
